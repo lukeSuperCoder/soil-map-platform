@@ -3,7 +3,7 @@ import { Message } from 'element-ui'
 
 // 创建axios实例
 const service = axios.create({
-  baseURL: 'http://192.168.0.102:8089/soil-api', // API的base_url
+  baseURL: 'http://127.0.0.1:8089/soil-api', // API的base_url
   timeout: 15000 // 请求超时时间
 })
 
