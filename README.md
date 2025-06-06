@@ -40,7 +40,7 @@
 ## 安装说明
 
 ### 环境要求
-- Node.js >= 12.x
+- Node.js >= 12.x (推荐 18.12.1)
 - npm >= 6.x
 
 ### 安装步骤
@@ -65,6 +65,53 @@ npm run serve
 ```bash
 npm run build
 ```
+
+### Docker 部署
+
+本项目支持 Docker 环境部署，使用 Node.js 18.12.1 版本。
+
+#### 远程部署docker镜像
+```bash
+   # 拉取镜像
+   docker pull lukesupercoder/soil-platform:latest
+   
+   # 运行容器
+   docker run -d -p 80:80 lukesupercoder/soil-platform:latest
+   
+   # 或者使用docker-compose
+   export DOCKER_USERNAME=你的用户名
+   docker-compose up -d app-prod
+```
+
+#### 开发环境
+
+```bash
+# 启动开发环境
+docker-compose up app-dev
+
+# 后台运行
+docker-compose up -d app-dev
+```
+
+#### 生产环境
+
+```bash
+# 构建并启动生产环境
+docker-compose up --build app-prod
+
+# 后台运行
+docker-compose up -d app-prod
+
+# 仅构建镜像
+docker-compose build app-prod
+
+# 停止服务
+docker-compose down
+```
+
+#### 自定义配置
+
+可通过修改 `docker-compose.yml` 文件自定义端口映射和环境变量。
 
 ## 项目配置
 
