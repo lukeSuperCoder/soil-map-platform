@@ -2,6 +2,9 @@
 
 基于 Vue.js 和 OpenLayers 开发的土壤信息服务平台，提供土壤数据可视化、空间分析和查询功能。
 
+## 项目关联
+- [土壤信息可视化平台后端](https://github.com/lukeSuperCoder/webgis-postgis-admin)
+
 ## 功能特点
 
 ### 1. 地图可视化
